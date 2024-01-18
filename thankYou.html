@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="styles.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section class="caja align">
+        <section>
+            <img src="illustration-thank-you.svg" alt="Thank You">
+        </section>
+
+        <section>
+            <div class="resultDisplay" id="respuestaContainer"></div>
+        </section>
+
+        <script>
+            // Recuperar la variable desde localStorage
+            var respuesta = localStorage.getItem('respuesta');
+    
+            // Mostrar la variable en la página
+            var respuestaContainer = document.getElementById("respuestaContainer");
+            respuestaContainer.innerHTML = respuesta;
+        </script>
+
+        <section class="alignText">
+            <h2 class="adjMargin">Thank You!</h2>
+            <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+                 don’t hesitate to get in touch!</p>
+        </section>
+    </section>
+</body>
+</html>
